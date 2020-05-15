@@ -1,0 +1,41 @@
+@charset "utf-8";
+.navi{
+	background-color: yellow;
+	width: 500px;
+	height: 50px;
+}
+.navi ul{
+	list-style:none;
+	height: 40px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+.navi ul li{
+	float: left;
+	font-size: 20px;
+	margin-right: 20px;
+}
+.navi ul li a{
+	text-decoration: none;
+}
+p{
+	border: 1px solid black;
+	padding: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+#para1{
+	text-align: left;
+}
+#para2{
+	text-align: right;
+}
+#para3{
+	text-align: center;
+}
+#para4{
+	text-align: justify;
+}
+strong{
+	color: red
+}

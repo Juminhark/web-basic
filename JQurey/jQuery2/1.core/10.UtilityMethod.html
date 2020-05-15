@@ -1,0 +1,60 @@
+<p id="foo">CLICK</p>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	console.log($.trim( "  lots of extra whitespace    "));
+	
+	$.each([ "foo", "bar", "baz"], function( idx, val ) {
+		console.log(" element " + idx + " is " + val);
+	});
+	// 배열객체
+	
+	$.each({ foo: "bar",baz: "bim"}, function( k, v ) {
+		console.log(k + " : " + v );
+	});
+	
+	var myArray = [ 1, 2, 3, 5 ];
+	if ( $.inArray( 3, myArray ) !== -1){
+		console.log( "found it!" );
+	}
+	//가지고 있는지 찾기 3 이 myArray배열안에 없으면 -1를 리턴
+
+	var firstObject = { foo: "bar", a: "a"};
+	var secondObject = { foo: "bar", b: "b"};
+	var newObject = $.extend( firstObject, secondObject);
+	// .extend는 두배열을 합체하는데 1번째 파라미터값을 변질시킨다
+	
+	console.log( firstObject );
+	console.log( newObject );
+	
+	var firstObject = { foo: "bar", a: "a"};
+	var secondObject = { foo: "bar", b: "b"};
+	var newObject = $.extend( {}, firstObject, secondObject);
+	// .extend의 1번째 값변질을 대비, {} 투입
+	
+	console.log( firstObject );
+	console.log( newObject );
+	
+	var myFunction = function(){
+		console.log( this ); 
+	};
+	var myObject = {
+			foo: "bar"
+	};
+	
+	myFunction();
+	var myProxyFunction = $.proxy( myFunction, myObject );
+	myProxyFunction();
+	
+	var myObject = {
+			mtFn: function(){
+				console.log( this );
+			}
+	};
+	
+	$( "#foo" ).click( myObject.myFn );
+	$( "#foo" ).click( $.proxy( myObject, "myFn" ));
+	
+});
+</script>

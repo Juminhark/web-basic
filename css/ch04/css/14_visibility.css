@@ -1,0 +1,12 @@
+@charset "utf-8";
+img{
+	border: 2px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 3px #ccc;
+}
+.visible{
+	visibility:visible;
+}
+.hidden{
+	visibility:hidden;
+}

@@ -1,0 +1,19 @@
+div{
+	width: 200px;
+	height: auto;
+	margin: 10px 5px;
+	border: 1px solid black;
+}
+div.horizontal{
+	float: left;
+}
+#cont1, #cont11{
+	background: lightyellow;
+}
+#cont2, #cont12{
+	background: lightgreen;
+}
+#cont3, #cont13{
+	background: lightblue;
+}
+

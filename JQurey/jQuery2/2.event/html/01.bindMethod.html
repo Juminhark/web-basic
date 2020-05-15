@@ -1,0 +1,43 @@
+<div id="box">
+	<p></p>
+</div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../01.bindMethod.js"></script>
+
+<style>
+html * {
+	margin: 0;
+	padding: 0;
+}
+
+#box {
+	width: 200px;
+	height: 200px;
+	border: 2px solid blue;
+	margin-left: 30px;
+	margin-top: 20px;
+	background-color: blue;
+}
+
+#box.mouseover {
+	background-color: red;
+}
+
+#box.mouseout {
+	background-color: green;
+}
+
+#box.mousedown {
+	background-color: purple;
+}
+
+#box.mouseup {
+	background-color: #FF9C00;
+}
+
+#box>p {
+	padding: 30px;
+	color: white;
+}
+</style>

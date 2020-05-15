@@ -1,0 +1,47 @@
+<style>
+	.big{font-size:200px;color:blue;}
+	.outline{border:1px solid red;}
+</style>
+<h1>HELLO</h1>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	// 두개의 결과는 같다
+	console.log($("h1").css("fontSize"));    //css스타일
+	console.log($("h1").css("font-size"));   //jquery스타일
+	
+	// css 값 설정
+	$("h1").css("fontSize","100px");
+	
+	var h1 = $("h1");
+	
+	h1.addClass("big");
+	// class 추가
+	h1.removeClass("big");
+	// class 제거
+	h1.toggleClass("big");
+	// 적용전으로 되돌리기
+	
+	if(h1.hasClass("big")){
+		console.log("BIG");
+	}
+	
+	$("h1").css({
+		fontSize: "100px",
+		color: "red"
+	});
+	
+	$("h1").addClass("outline");
+	$("h1").width("200px");
+	
+	console.log($("h1").width());
+	
+	$("h1").height("100px");
+	
+	console.log($("h1").height());
+	
+	console.log($("h1").position());
+	
+});
+</script>

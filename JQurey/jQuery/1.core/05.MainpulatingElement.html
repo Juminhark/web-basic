@@ -1,0 +1,98 @@
+<ul id="myList">
+	<li>0</li>
+	<li>1</li>
+</ul>
+<div id="myDiv">
+	<p>0</p><p>1</p>
+	<a></a>
+</div>
+<div id="content"></div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	// [Getting and Setting Information About Elements]
+	// Changing the HTML od an element.
+	$("#myDiv p:first").html("New <strong>first</strong> paragraph!");
+	
+	// [Moving, Copying, and Removing Elements]
+	// Note that there`s no way to access the list item that we moved, 
+	// as this returns the list itself. 
+	
+	// Make the first list item last list item:
+	$("#myList li:first").appendTo("#myList");
+	/* 주어객체를 목적어 객체의 밑바닥으로 */
+	/* append : 밑바닥에 추가 */
+	
+	// Another approach th the asme problem:
+	$("#myList").append($("myList li:first"));
+	
+	
+	// [Cloning Elements]
+	// Copy the first list item to the end of the list:
+	$("#myList li:first").clone().appendTo("#myList");
+	
+	// [Creating New Elements]
+	// Creating new elements form an HTML string.
+	$("<p>This is a new paragraph</p>")
+	$("<li class=\"new\">new list item</li>");
+	/* 새로운 elements(태그 data 끝태그) 만들기. 어디에 append하지 않아서 화면에 출력은 안된다*/
+	
+	// Creating a new element with an attribute object.
+	// Property names generally do not need to be
+	// quoted unless they are reserved words(as class is in the case)
+	// <a class="new" href="foo.html">This is a<strong>new</strong>link</a>
+	$("<a/>",{
+		html: "This is a <strong>new</string> link",
+		"class": "new",
+		href: "foo.html"
+	});
+	
+	// Getting a new element on to the page.
+	var myNewElement = $("<p>New element</p>");
+	myNewElement.appendTo("#content");
+	myNewElement.insertAfter("ul:last");  // This will remove the p from #content!
+	$("ul").last().after(myNewElement.clone());  // Clone the p so now we have two.
+	// 객체 순서 ul - myDiv - content
+	
+	// Creating and adding an element to the page at yhe same time.
+	$("ul").append("<li>list item</li>");
+	
+	
+	// The syntax for adding new elements to the page is easy, so it`s tempting to 
+	// forget that there`s a huge performance cost for adding to the DOM repeatedly. 
+	// if you`re adding many elementx to the same container, you`ll want to concatenate
+	// all the HTML into a single string, and then append that string to the container
+	// instead of appending the elements one at a time.
+	var myItems = [];
+	var myList = $("#myList");
+	for(var i = 0; i < 100; i++){
+		myItems.push("<li>item" + i + "</li>");
+	}
+	myList.append(myItems.join(""));
+	
+	// [Manipulating(조작) Attributes(결과)]
+	// Manipulating a single attribute.
+	$("#myDiv a:first").attr("href","newDestination.html"); // .attr("속성명","속성값")
+	console.log($("#myDiv a:first").attr("href"));
+	
+	// Manipulating multiple attributes.
+	$("#myDiv a:first").attr({
+		href: "newDestination.html",
+		rel: "nofollow"
+	});
+	
+	// Using a function to determine an attribute`s new value.
+	$("#myDiv a:first").attr({
+		rel: "nofollow",
+		href: function(idx, href){
+			return "/new/" + href;
+		}
+	});
+	console.log($("#myDiv a:first").attr("href"));
+	
+	$("#myDiv a:first").attr("href", function(idx, href){
+		return "/new/" + href;
+	});
+});
+</script>

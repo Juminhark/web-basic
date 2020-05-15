@@ -1,0 +1,31 @@
+<div id="myDiv">
+	<ul id="myList">
+		<li><div class="content">0</div></li>
+		<li><div class="content">1</div></li>
+	</ul>
+</div>
+
+<!-- .data 는 cash 처럼 서버에 계속 요청하는게 아니라 dom 객체에 넣어 놓고 다시 사용할때 또는 사용하지 않고 있다가 나중에 사용할때
+쓴다 -->
+
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	//Storing and retrieving data related to an element.
+	$("#myDiv").data("keyName",{foo: "bar" });
+	console.log($("#myDiv").data("keyName"));   //Return{ foo: "bar"}
+	
+	//Storing a relationship between elements using .data()
+	$("#myList li").each(function(){
+		var li = $(this);
+		var div = li.find("div.content");
+		li.data("contentDiv", div);
+	});
+	
+	// Later, we don`t have to find the div again;
+	// we can just read it from the list iten`s data
+	var firstLi = $("#myList li:first");
+	firstLi.data("contentDiv").html("new content");
+});
+</script>

@@ -1,0 +1,76 @@
+<div class="grandparent">
+	<div class="parent">
+		<div class="child">
+			<span class="subchild"></span>
+		</div>
+	</div>
+	<div class="surrogateParent1"></div>
+	<div class="surrogateParent2"></div>
+</div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+
+$(function(){
+	// ================[Parents]====================== 
+	console.log($("span.subchild").parent());  
+	// .parent 부모 element소환
+	// 0:div.child
+	
+	console.log($("span.subchild").parents("div.parent"));
+	// .parents 부모들중에 ("div.parent") 소환
+	// 0:div.patent
+	
+	console.log($("span.subchild").parents());
+	// 0:div.child  1:div.parent  2:div.grandparent  3:body  4:html
+	
+	console.log($("span.subchild").parentsUntil("div.grandparent"));
+	// 부모들중 (parameter)전까지 return
+	// 0:div.child  1:div.parent
+	
+	console.log($("span.subcild").closest("div"));
+	// return 없음
+	// selector return값중 div 찾기
+	
+	console.log($("div.child").closest("div"));
+	// 0:div.child
+	//=================================================
+		
+	// ================[Children]====================== 	
+	console.log($("div.grandparent").children("div"));
+	//0:div.parent 1:div.surrogateParent1 2:div.surrogateParent2
+	
+	console.log($("div.grandparent").find("div"));
+	//0:div.parent  1:div.child  2:div.surrogateParent1  3:div.surrogateParent2
+	//=================================================
+	
+	// ================[Siblings]====================== 
+	console.log($("div.parent").next());
+	// 형제들중 바로 아래
+	//0:div.surrogateParent1
+	
+	console.log($("div.parnet").prev());
+	// 형제들중 바로 위에
+	// 없음
+	
+	console.log($("div.parent").nextAll());
+	
+	console.log($("div.parent").nextAll().first());
+	
+	console.log($("div.parent").nextAll().last());
+	
+	console.log($("div.surrogateParent2").prevAll());
+	//나랑 가까운것부터 인덱스 부여
+	
+	console.log($("div.surrogateParent2").prevAll().first());
+	
+	console.log($("div.surrogateParent2").prevAll().last());
+	
+	console.log($("div.parent").siblings());
+	// 형제들 다
+	// 인덱스 부여는 위에부터
+	
+	console.log($("div.surrogateParent1").siblings());
+	//=================================================
+});
+</script>

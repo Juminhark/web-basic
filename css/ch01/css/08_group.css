@@ -1,0 +1,12 @@
+﻿@charset "utf-8";
+h1, h3{
+	font-family: "돋움"; /* 돋움 글꼴*/
+	color: purple; /* 글자색 보라 */
+}
+p{
+	font-size: 12px; /* 글자 크기 12px */
+	line-hieght: 20px; /* 줄간격 20px */
+	margin: 10px 20px; /* 바깥 여백 상하 10px, 좌우 20px */
+	border: 1px solid #ccc; /* 1px 회색의 실선 테두리 */
+	padding: 5px; /* 단락 안여백 5px */
+}

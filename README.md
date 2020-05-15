@@ -1,12 +1,8 @@
 # WEB-basic
 
-[TOCM]
+## VSC Setting
 
-## [README.md 작성](https://pandao.github.io/editor.md/en.html#Features)
-
-# VSC Setting
-
-## step1 : extensions
+### step1 : extensions
 
 - waka time
 - markdown all in one
@@ -18,3 +14,5 @@
 - Live Server
 - Code Spell Checker
 - Rainbow Brackets
+
+## [README.md 작성](https://pandao.github.io/editor.md/en.html#Features)

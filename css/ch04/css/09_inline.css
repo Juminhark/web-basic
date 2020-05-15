@@ -1,0 +1,15 @@
+.content1 img{
+	border: 2px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 3px #ccc;
+}
+.content2 img{
+	display: block;
+	margin: 10px 5px;
+	border: 2px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 3px #ccc;
+}
+
+/* block은 세로 배치 가로로 배치하고 싶으면 float
+   lnline은 가로배치 세로로 배치하고 싶으면 display block*/

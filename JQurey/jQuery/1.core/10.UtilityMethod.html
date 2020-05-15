@@ -1,0 +1,83 @@
+<p id="foo">CLICK</p>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+//jQuery offers several ytility methods in the $ namespace
+$(function(){
+	// $.trim(): Removers leading and trailing whitespace:
+	console.log($.trim( "    lots of extra whitespace    "));  //lots of extra whitespace
+	
+	
+	// $.each(): Iterates over arrays and objects:
+	$.each([ "foo", "bar", "baz" ], function( idx, val){
+		console.log( "elements" + idx + " is " + val);
+	});
+	// element 0 is foo
+	// element 1 is bar
+	// element 2 is baz
+	
+	$.each({ foo: "bar", baz: "bim" }, function( k, v){
+		console.log( k + " : " + v );
+	});
+	// foo : bar
+	// baz : bim
+	
+	
+	// $.inArray(): Returns a value`s index in an array, or -1 if the value is not in the array:
+	var myArray = [ 1, 2, 3, 5 ];
+	if ( $.inArray( 3, myArray ) !== -1 ){   //3이라는 값이 myArray에 몇번째 있는지 말해준다 없으면 -1를 리턴
+		console.log( "found it!" );  //found it!
+	}
+	
+	// 확장. 두객체 통합. 첫번째 객체도 변질된다.
+	// $.extend(): Changes the properties of the first object using the properties of subsequent objects:
+	var firstObject = { foo: "bar", a:"a" };
+	var secondObject = { foo: "baz", b:"b" };
+	var newObject = $.extend( firstObject, secondObject);
+	
+	console.log( firstObject );    //{a:"a",b:"b",foo:"baz"}
+	console.log( newObject );      //{a:"a",b:"b",foo:"baz"}
+	
+	// 확장. 두객체 통합. 원천 객체를 변질 시키고 싶지 않다면 첫번째에 빈객체를 둔다.
+	// if you don`t want to change any of the objects you pass to $.extend(), pass an empty object as the first argument
+	var firstObject = { foo: "bar", a:"a" };
+	var secondObject = { foo: "baz", b:"b" };
+	var newObject = $.extend( {}, firstObject, secondObject);
+	
+	console.log( firstObject );    //{a:"a",foo:"baz"}
+	console.log( newObject );      //{a:"a",b:"b",foo:"baz"}
+	
+	
+	// 가짜
+	// $.proxy(): Returns a function that will always run in the provided scope - that is, sets
+	// the meaning of this inside the passed function to the second argument.
+	var myFunction = function(){
+		console.log( this );
+	};
+	var myObject = {
+		foo: "bar"
+	};
+	
+	myFunction();   // window
+	var myProxyFunction = $.proxy( myFunction, myObject );
+	myProxyFunction();  //myObject
+	
+	// if you hava an object with methods, you can pass the object and the name of a methos
+ 	// to return a function that will always run in the scope of the object.
+	// http://api.jquery.com/jQuery.proxy/
+	var myObject = {
+		myFn: function(){
+			console.log(this);
+		}
+	};
+	
+	$("#foo").click( myObject.myFn );    //HTMLElement #foo
+	$("#foo").click( $.proxy( myObject, "myFn" ));  //{myFn: f}
+	// $ select를  클릭했을때 뒤를 실행(function 필요)
+	
+	
+	// $.proxy (  실행할 function , 공유할 context )
+	// $.proxy (  , function name)
+	
+});
+</script>

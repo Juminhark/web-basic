@@ -1,0 +1,17 @@
+@charset "utf-8";
+.bttn{
+	width:200px;
+	height: 100px;
+	margin:50px;
+	background:blue;
+	border:1px solid black;
+	border-radius:50px;
+}
+#shd1{
+	box-shadow: 10px 10px 5px 5px #666;
+	         /* 수평  수직  흐림 확장  색깔 */
+}
+#shd2{
+	box-shadow: 10px 10px 50px -1px white inset;
+	                                    /* 안쪽 그림자 */
+}

@@ -1,0 +1,18 @@
+<a>HELLO</a>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	$("a").attr("href", "something.html");
+	$("body").append("<p>"+$("a").attr("href")+"</p>"); //something.html
+	
+	$("a").attr({
+		title: "all titles are same too!",
+		href: "somethingNew.html"
+	});
+	$("body").append("<p>"+$("a").attr("href")+"</p>"); //somethingNew.html
+	
+	$("a").removeAttr("href");
+	$("body").append("<p>"+$("a").attr("href")+"</p>"); //undifined
+});
+</script>

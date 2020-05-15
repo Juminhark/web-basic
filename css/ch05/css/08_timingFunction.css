@@ -1,0 +1,30 @@
+﻿#ex div{
+	float: left;
+	width: 100px;
+	height: 50px;
+	margin: 5px 10px;
+	padding: 5px;
+	color: white;
+	background-color: #006aff;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+#ex:hover div{
+	height: 400px;
+}
+#ex .ease{
+	transition: 1s ease; /* 같은 속도 유지 */
+}
+#ex .ease-in{
+	transition: 1s ease-in; /* 시작은 느리게 */
+}
+#ex .ease-out{
+	transition: 1s ease-out; /* 마지막은 느리게 */
+}
+#ex .ease-in-out{
+	transition: 1s ease-in-out; /* 시작은 느리게, 마지막은 느리게 */
+}
+#ex .linear{
+	transition: 1s linear; /* 시작은 느리게, 점점 빨라지다가, 마지막은 느리게 */
+}

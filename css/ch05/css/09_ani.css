@@ -1,0 +1,22 @@
+﻿#myball{
+	position:relative;
+		width: 100px;
+		height:100px;
+	border-radius:50px;
+	border:2px solid balck;
+	background:url(../img/f1.png) no-repeat center center padding-box;
+	animation:myani 1s infinite alternate;
+	/* name duration timing-function delay iteration-count direction */
+}
+@keyframes myani{
+	0%{
+		left: 10px;
+	}
+	50%{
+		background:url(../img/woman.png) no-repeat center center;
+	}
+	100%{
+		background:url(../img/f2.png) no-repeat center center;
+		left: 500px;
+	}
+}

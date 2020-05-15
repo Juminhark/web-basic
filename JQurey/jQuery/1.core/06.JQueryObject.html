@@ -1,0 +1,26 @@
+<div id="logo"></div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+// When creating new elements (or selecting existing ones),
+// jQuery returns the elements in a collection
+$(function(){
+	// Comparing DOM elements (with more readable variable names).
+	var $collection1 = $("#logo"); //jQuery Object
+	var $div1 = $collection1.eq(0); //jQuery Object
+	var div1 = $collection1.get(0); //HTML Elemnet
+	
+	console.log($collection1);
+	console.log($div1);
+	console.log(div1);
+	console.log($collection1 + "," + $div1 + "," + div1);
+	
+	var $collection2 = $("#logo");
+	var $div2 = $collection2.eq(0);
+	var div2 = $collection2.get(0);
+	
+	console.log($collection1 === $collection2);  //false
+	console.log($div1 === $div2);  //false
+	console.log(div1 === div2);    //true
+});
+</script>

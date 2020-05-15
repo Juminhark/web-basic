@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<h3>Popover</h3>
+	<a href="#" data-toggle="popover" title="제목" data-content="내용">Toggle popover</a>
+	
+	<h3>Popover Position</h3>
+	<ul class="list-inline">
+		<li><a href="#" data-toggle="popover" data-placement="top" title="제목" data-content="내용">Top</li>
+		<li><a href="#" data-toggle="popover" data-placement="Bottom" title="제목" data-content="내용">Bottom</li>
+		<li><a href="#" data-toggle="popover" data-placement="Left" title="제목" data-content="내용">Left</li>
+		<li><a href="#" data-toggle="popover" data-placement="Right" title="제목" data-content="내용">Right</li>
+		<li><a href="#" data-toggle="popover" data-placement="Auto" title="제목" data-content="내용">Auto</li>
+	</ul>
+	
+	<h3>Popover Close</h3>
+	<a href="#" title="제목" data-toggle="popover" data-trigger="focus" data-content="내용">Click me</a>
+	<a href="#" title="제목" data-toggle="popover" data-trigger="hover" data-content="내용">Click me</a>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('[data-toggle="popover"]').popover();
+});
+</script>
+
+</body>
+</html>

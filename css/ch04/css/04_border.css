@@ -1,0 +1,8 @@
+h3{
+	padding-bottom:5px;
+	border-bottom:3px solid blue;
+}
+p{
+	padding: 10px;
+	border: 1px red solid;   /* solid red 순서가 바뀌어도 알아먹는다. */
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script	src="//cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script src="../01.general.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<div class="container">
+	<form class="form-horizontal" action="server.html">
+		<fieldset>
+			<legend>일반</legend>	
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="cname">이름 (2자 이상, *)</label> 
+				<input name="name" minlength="2" type="text" required>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="cemail">이메일 (*)</label> 
+				<input id="cemail" type="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="curl">URL</label> 
+				<input id="curl" type="url"	name="url">
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="ccomment">남기는 말 (*)</label>
+				<textarea id="ccomment" name="comment" required></textarea>
+			</div>
+			<button type="submit" class="btn btn-default">제출</button>
+		</fieldset>		
+	</form>
+</div>

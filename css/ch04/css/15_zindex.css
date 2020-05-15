@@ -1,0 +1,36 @@
+@charset "utf-8";
+h1{
+	font-family: Arial;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+}
+div{
+	width: 200px;
+	height: 150px;
+	margin: 10px 5px;
+	padding: 20px;
+	border: 1px solid black;
+	color: yellow;
+}
+#cont1{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	background: red;
+	z-index: 1;
+}
+#cont2{
+	position: absolute;
+	left: 180px;
+	top: 20px;
+	background: green;
+	z-index: 3;
+}
+#cont3{
+	position: absolute;
+	left: 25px;
+	top: 160px;
+	background: blue;
+	z-index: 2;
+}

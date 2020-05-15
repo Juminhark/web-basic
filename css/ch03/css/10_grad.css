@@ -1,0 +1,17 @@
+﻿@charset "utf-8";
+div{
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+.grad1{
+	background: linear-gradient(135deg, blue, white);
+}
+.grad2{
+	background: linear-gradient(to bottom, blue, white);
+}
+.grad3{
+	background: linear-gradient(to bottom, blue, white 30%, blue);
+}
+

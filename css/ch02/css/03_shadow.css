@@ -1,0 +1,25 @@
+@charset "utf-8";
+body{
+	font-family: Arial;
+	background: #808080;
+}
+h1{
+	font-size: 5em;
+	color: white;
+}
+.shadow1{
+	text-shadow: 1px 1px 3px #000;
+}
+.shadow2{
+	color: black;
+	text-shadow: 3px -3px 5px #fff;
+}
+.shadow3{
+	color: #000;
+	text-shadow:
+		0 0 4px #ccc,
+		0 -5px 4px #ff3,
+		2px -10px 6px #fd3,
+		-2px -15px 11px #f80,
+		2px -19px 18px #f20;
+}

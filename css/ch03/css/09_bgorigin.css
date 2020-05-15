@@ -1,0 +1,21 @@
+@charset "utf-8";
+div{
+	width: 400px;
+	padding: 20px;
+	margin: 5px;
+	border: 15px solid skyblue;
+	border-radius: 20px;
+	background-image: url(../img/bg2.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+.intro1{
+	background-origin: border-box;
+	/* background -position 과 함께 쓰는 것이 background-clip과의 차이점.*/
+}
+.intro2{
+	background-origin: padding-box;
+}
+.intro3{
+	background-origin: content-box;
+}

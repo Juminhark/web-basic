@@ -1,0 +1,23 @@
+<a>HELLO</a>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	$(function () {
+		///$(document).ready()를 줄인거
+		$('a').attr('href', 'something.html'); //a 태그에 속성 붙이기
+		// string 타입으로 jquery함수안에 넣으면 해당 테그를 찾아낸다.
+		// collection 객체를 리턴한다.
+		// .attr()  속성을 읽고 쓰기
+		$('body').append('<p>' + $('a').attr('href') + '</p>'); //something.html
+
+		$('a').attr({
+			title: 'all titles are same too!',
+			href: 'somethingNew.html',
+		});
+		$('body').append('<p>' + $('a').attr('href') + '</p>'); //somethingNew.html
+
+		$('a').removeAttr('href');
+		// 속성 제거
+		$('body').append('<p>' + $('a').attr('href') + '</p>'); //undifined
+	});
+</script>

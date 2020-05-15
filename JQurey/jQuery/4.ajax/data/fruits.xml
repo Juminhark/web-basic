@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<fruits>
+	<fruit>
+		<name>사과</name>
+		<price>1000원</price>
+		<date>2013.12.10</date>
+		<origin>국산</origin>
+	</fruit>
+	<fruit>
+		<name>딸기</name>
+		<price>5000원</price>
+		<date>2013.08.01</date>
+		<origin>필리핀</origin>
+	</fruit>
+	<fruit>
+		<name>귤</name>
+		<price>2000원</price>
+		<date>2014.03.01</date>
+		<origin>미국</origin>
+	</fruit>
+	<fruit>
+		<name>파인애플</name>
+		<price>10000원</price>
+		<date>2014.07.10</date>
+		<origin>호주</origin>
+	</fruit>
+</fruits>

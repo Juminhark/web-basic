@@ -1,0 +1,14 @@
+﻿#ex div{
+	width: 100px;
+	height: 100px;
+	border-radius: 0px;
+	border: 2px solid black;
+	background: url(../img/f1.png) no-repeat center center padding-box;
+	transition: all 0.5s ease-in 0.3s;
+	      /* property duration timing-function delay*/
+}
+#ex:hover div{
+	border-radius: 50px;
+	border: 1px solid blue;
+	background: url(../img/f2.png) no-repeat center center padding-box;
+}

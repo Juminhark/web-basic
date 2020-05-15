@@ -1,0 +1,5 @@
+@charset "utf-8";
+#container>ul{
+	border: 1px dotted black;
+	/* id=container인 요소 아래의 자식 ul 요소에 1px 점선으 그린다*/
+}

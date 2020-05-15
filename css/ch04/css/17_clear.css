@@ -1,0 +1,12 @@
+@charset "utf-8";
+.content{
+	float: left;
+}
+aside{
+	float: right;
+}
+footer{
+	clear: both;
+}
+
+/* flaot설정 무시 - clear */

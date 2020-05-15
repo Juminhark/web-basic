@@ -1,0 +1,47 @@
+<div id="box" class="out">
+	<p>mouseout</p>
+</div>
+<div>
+	<button id="btn1" type="button">remove mouseout event handler</button>
+	<button id="btn2" type="button">remove all event handler</button>
+</div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../02.unbindMethod.js"></script>
+
+<style>
+html * {
+	margin: 0;
+	padding: 0;
+}
+
+#box {
+	width: 200px;
+	height: 200px;
+	border: 2px solid blue;
+	margin-left: 30px;
+	margin-top: 20px;
+	background-color: blue;
+}
+
+#box.mouseover {
+	background-color: red;
+}
+
+#box.mouseout {
+	background-color: green;
+}
+
+#box.mousedown {
+	background-color: purple;
+}
+
+#box.mouseup {
+	background-color: #FF9C00;
+}
+
+#box>p {
+	padding: 30px;
+	color: white;
+}
+</style>

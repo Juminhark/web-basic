@@ -1,0 +1,22 @@
+@charset "utf-8";
+.intro{
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+}
+#bg1{
+	background-image:url(../img/bg2.png);
+	background-repeat:no-repeat;
+	background-position:0% 0%;
+}
+#bg2{
+	background-image:url(../img/bg2.png);
+	background-repeat:no-repeat;
+	background-position:30% 60%;
+}
+body{
+	background-image:url(../img/bg2.png);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:right bottom;
+}

@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.out{
+	list-style-type: upper-alpha;
+	list-style-position: outside;	
+}
+
+.in{
+	list-style-type: inside;
+	list-style-image:url(../img/bullet.png);	
+}

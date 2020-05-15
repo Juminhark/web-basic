@@ -1,0 +1,15 @@
+﻿table{
+	border-collapse: seperate;
+	margin-bottom: 20px;
+}
+#tb1 th, #tb1 td{
+	border: 1px solid black;
+	empty-cells: show;
+}
+#tb2 th, #tb2 td{
+	border: 1px solid black;
+	empty-cells: hide;
+}
+caption{
+	caption-side: bottom;
+}

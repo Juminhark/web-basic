@@ -1,0 +1,23 @@
+<div id="myDiv">
+	<ul>
+		<li><div class="content">0</div></li>
+		<li><div class="content">1</div></li>
+	</ul>
+</div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	$("#myDiv").data("keyName",{foo:"bar"});
+	console.log($("#myDiv").data("keyName"));
+	
+	$("#myList li").each(function(){
+		var li = $(this);
+		var div = li.find("div.content");
+		li.data("contentDiv", div);
+	});
+	
+	var firstLi = $("#myList li:first");
+	firstLi.data("contentDiv").html("new content");
+});
+</script>

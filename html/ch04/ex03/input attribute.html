@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>input attribute</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="userId" id="userId" size="5"/> <br>
+		<input type="text" value="how" readonly/> <br>
+		<input type="text" placeholder="암호"/> <br>
+		<input type="text" autofocus/> <br>
+		<input type="text" minlength="3" maxlength="10" required/> <br>
+		<input type="number" min="1" max="10" step="2"/> <br>
+		<input type="date" value="2020-03-20" min="2020-03-02" max="2020-04-20"/> <br>
+		<input type="time" min="09:00" max="13:00"/> <br>
+		<input type="submit" value="전송"> <br>
+		<input type="image" src="img/login.jpg" width="40" height="25"/> <br>
+		<input type="submit" formaction="#" formmethod="post" formtarget="msg"/> <br>
+		<input type="file" multiple/>
+	</form>
+</body>
+</html>
+
+
+<!-- name id 해당객체에 이름을 붙여주는건 같다 name은 문서내에서 중복가능 id는 문서내에 1개 -->
+<!-- value 는 기본값 -->
+<!-- readonly -->
+<!-- placeholder 출력화면이 작은경우 label도 없애는 문법 -->
+<!-- autofocus 보통 1번째 줄에 오토포커스를 주고 
+      입력창에 틀린부분을 가르켜주는 용도로도 사용 이때 나머지값들이 맞을경우에는 value값으로 설정-->

@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+#container ul ul{
+	border: 1px dotted black;
+	/* id=container인 요소 아래의 모든 ul안의 ul요소에 1px 점선을 그린다.*/
+}

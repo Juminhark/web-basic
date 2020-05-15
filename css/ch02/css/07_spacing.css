@@ -1,0 +1,19 @@
+@charset "utf-8";
+@font-face{
+	font-family:'myBand';
+	src:url('../img/Band.eot');
+	src:url('../img/Band.ttf') format('truetype');
+	src:url('../img/Band.woff') format('woff');
+}
+.heading1{
+	font-family:myBand;
+	font-size: 5em;
+	letter-spacing: 0.1em;
+	word-spacing:0.2em;
+}
+.heading2{
+	font-family:myBand;
+	font-size: 5em;
+	letter-spacing: 0.3em;
+	word-spacing:0.6em;
+}

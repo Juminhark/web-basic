@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	$(function(){
+		var val = location.href.substr(
+				location.href.lastIndexOf('=') + 1
+		);
+		$(document.body).append(val);
+	});
+</script>
+
+<!-- b.html?age=24  : ?뒤에는 파라미터로 취급한다
+     lastofindex는 마지막꺼는 기준으로
+     .substr(index) index부터 마지막까지 -->

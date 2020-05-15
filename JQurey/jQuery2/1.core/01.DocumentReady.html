@@ -1,0 +1,29 @@
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("body").append("<p>one</p>");
+	});
+	
+	$(function(){
+		$("body").append("<p>two</p>");
+	});
+	
+	function reayFn(){
+		$("body").append("<p>three</p>");
+	}
+	$(document).ready(reayFn);
+</script>
+
+<!-- 
+
+$() collectrion return   .jquerymethod
+.ready  서버로 부터 html문서로 받은것들중에 
+온전히 dom이 다 준비가 되었는지 확인 
+.ready(function(){}) dom 준비가 다 되면 function 실행
+
+.append(element) element 객체가 생긴다
+
+$(document).ready(function(){})을 줄여서
+$(function(){}) 
+
+-->

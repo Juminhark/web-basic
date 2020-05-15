@@ -1,0 +1,5 @@
+﻿@charset "utf-8";
+body{
+	background-color: #333;  /* 배경색은 짙은 회색 */
+	color: #fff;  /* 글자색은 희색 */
+}

@@ -1,0 +1,12 @@
+
+@charset "utf-8";
+.multicol{
+	columns: auto 3; /* 넓이값 단개수 */
+	column-rule: 1em dotted black;
+}
+.subtitle{
+	column-span: all; /* 단합치기 */
+	backgrround: skyblue;
+	padding: 5px;
+	border: 2px double blue;
+}

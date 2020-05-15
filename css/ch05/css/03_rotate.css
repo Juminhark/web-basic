@@ -1,0 +1,18 @@
+﻿@charset "utf-8";
+div{
+	float: left;
+	margin: 50px;
+	width: 150px;
+	height: 190px;
+	background-color: rgba(0, 0, 255, 0.3);
+	perspective: 200px;
+}
+#i1:hover{
+	transform: rotateX(45deg);
+}
+#i2:hover{
+	transform: rotateY(45deg);
+}
+#i3:hover{
+	transform: rotateZ(45deg);
+}

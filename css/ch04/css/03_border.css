@@ -1,0 +1,15 @@
+h3{
+	border-color:blue;
+	border-style:solid;
+	padding:10px;
+	border-top-width:5px;
+	border-right-width:0;
+	border-bottom-width:5px;
+	border-left-width:0;
+}
+p{
+	border-color: red black red black;
+	padding: 10px;
+	border-style:dotted;
+	border-width:3px;
+}

@@ -1,0 +1,26 @@
+<div id="logo"></div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+
+// jquery 객체 html 객체 비교
+$(function(){
+	var $collection1 = $("#logo"); //jquery object : $ 를 앞에 붙여준다 관례 기능은x
+	var $div1 = $collection1.eq(0); //jquery object
+	var div1 = $collection1.get(0); //HTML element
+	
+	console.log($collection1);
+	console.log($div1);
+	console.log(div1);
+	console.log($collection1 + "," + $div1 + "," + div1);
+	
+	var $collection2 = $("#logo"); 
+	var $div2 = $collection2.eq(0); 
+	var div2 = $collection2.get(0); 
+	
+	//jquery 객체는 새로운 collection을 리턴한다
+	console.log($collection1 === $collection2);  //false
+	console.log($div1 === div2);                 //false
+	console.log(div1 === div2);                  //true
+});
+</script>

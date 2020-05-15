@@ -1,0 +1,23 @@
+div{
+	float: left;  /* float이 속성이 적용되야 가로 배치가능. */
+	width: 200px;
+	height: 100px;
+	margin: 20px;
+	background:lightgreen;
+	border: 1px solid black;
+}
+.brd1{
+	border-top-left-radius:100px 50px;
+}
+.brd2{
+	border-bottom-right-radius:50% 30%;	
+}
+.brd3{
+	border-top-right-radius:50px;
+}
+.brd4{
+	border-radius:50px;
+}
+
+/* jta */
+/* http */

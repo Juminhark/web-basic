@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+ul li{
+	list-style: none; /* 목록에서 불릿 없앰*/
+	font-size: 16px /* 글자 크기 16px */
+	margin-top:10px /* 위쪽 여백 5px */
+}
+ul li label{
+	float: left; /* 왼쪽으로 배치 */
+	width: 80px; /* 너비 80px */
+	line-height: 20px; /* 줄간격 25px */
+}
+input[type="text"]{ /* 속성 셀렉터 input[type="text"]  text타입에만 적용*/
+	width: 150px; /* 너비 150px */
+	background-color: skyblue; /* 배경색 하늘색 */
+	border: 1px solid #000; /* 1px짜리 검은색 실선 */
+}
+
+
+
+
+

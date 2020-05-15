@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	var sendAge = function(age) {
+		window.location.href = "b.html?age="+age;
+	}
+	
+	var sendName = function(name){
+		window.location.href = "b.html?name="+name;
+	}
+</script>
+나이: <a href="xxjavascript:sendAge(23)">B로 이동</a>
+<button xxonClick="sendAge(33)">B로 이동</button><br><br>
+이름: <a href="xxjavascript:sendName('abel')">B로 이동</a>
+<button xxonClick="sendName('abel')">B로 이동</button>
+
+

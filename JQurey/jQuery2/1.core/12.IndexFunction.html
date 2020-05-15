@@ -1,0 +1,49 @@
+<ul>
+	<div class="test"></div>
+	<li id="foo1">foo</li>
+	<li id="bar1" class="test">bar</li>
+	<li id="baz1">baz</li>
+	<div class="test"></div>
+</ul>
+<div id="last"></div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	var foo = $("#foo1");
+	console.log("Index: " + foo.index());
+	
+	var listItem = $("li");
+	console.log("Index: " + listItem.index());    
+	//일단 1번째 인덱스를 뽑아낸다 아래랑 같이 같다
+	console.log("Index: " + listItem.first().index());
+	
+	var div = $("div");
+	console.log("Index: " + div.index());
+	console.log("Index: " + div.first().index());
+	
+	var foo = $("li");
+	console.log("Index: " + foo.index("li"));
+	// li들중 index
+	console.log("Index: " + foo.first().index("li"));
+	
+	var baz = $("#baz1");
+	console.log("Index: " + baz.index("li"));
+	
+	var listItem = $("#baz1");
+	console.log("Index: " + listItem.index(".test"));
+	
+	var div = $("#last");
+	console.log("Index: " + div.index("div"));
+	
+	var foo = $("li");
+	var baz = $("baz1");
+	console.log("Index: " + foo.index(baz));
+	//baz 에서 1번째 찾아네서 주어에서 인덱스
+	
+	var tests = $(".test");
+	var bar = $("#bar1");
+	console.log("Index: " + tests.index(bar));
+	console.log("Index: " + tests.index(bar.first()));
+});
+</script>

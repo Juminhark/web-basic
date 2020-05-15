@@ -1,0 +1,19 @@
+@charset "utf-8";
+.navi{
+	margin-top: -15px;
+	width: 100%;
+	height: 60px;
+}
+.navi ul{
+	height: 40px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+.navi ul li{
+	list-style-type: none;
+	float: left;
+	font-size: 15px;
+}
+article ul li{
+	list-style-type: square;
+}

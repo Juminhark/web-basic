@@ -1,0 +1,85 @@
+<ul>
+	<li id="a"><a href="#">Link 1</a></li>
+	<li id="b"><a href="#">Link 2</a></li>
+	<li id="c"><a href="#">Link 3</a></li>
+</ul>
+<form><input type="text" value="hello"/></form>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	var sum = 0;
+	var arr = [ 1, 2 ,3 ,4, 5 ];
+	for(var i = 0, I = arr.length; i < I;i++){
+		sum += arr[ i ];
+	}
+	console.log(sum);
+	
+	var sum = 0;
+	$.each(arr, function(index, value){
+		sum += value;
+	});
+	console.log(sum);
+	
+	var sum = 0;
+	var obj = {
+		foo: 1,
+		bar: 2	
+	}
+	
+	for(var item in obj){
+		sum += obj[ item ];
+	}
+	console.log(sum);
+	
+	var sum = 0;
+	$.each(obj, function(key, value){
+		sum += value;
+	});
+	console.log(sum);
+	
+	$("li").each(function(index, element){
+		console.log($(this).text());
+	});
+	
+	$("input").each(function(i, el){
+		var elem = $(el);
+		elem.val(elem.val() + "%");
+	});
+	
+	$("input").val(function(index, value){
+		return value + "%";
+	});
+	
+	var newArr = [];
+	$("li").each(function(){
+		newArr.push(this.id);
+	});
+	console.log(newArr);
+	
+	console.log(
+		$("li").map(function(){
+			return this.id;
+		}).get()		
+	);
+	
+	var arr = [{
+		id: "a",
+		tagName: "li"
+	}, {
+		id: "b",
+		tagName: "li"
+	}, {
+		id: "c",
+		tagName: "li"
+	}];
+	
+	console.log(
+		$.map(arr, function(value, index){
+			return value.id;
+		})
+	);
+	
+	
+});
+</script>

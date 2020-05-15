@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script	src="//cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="../03.mail.js"></script>
+<style>
+	.error{
+		color:red;
+	}
+</style>
+<form action="server.html">
+	<fieldset>	
+		<p>
+			<label for="newsletter">광고메일 수신 동의</label> 
+			<input type="checkbox" class="checkbox" id="newsletter" name="newsletter">
+		</p>
+		<fieldset id="mailFieldset">
+			<legend>종류</legend>
+			<label for="mail1"> 
+				<input type="checkbox" id="mail1" name="topic">시장동향
+			</label> 
+			<label for="mail2"> 
+				<input type="checkbox" id="mail2" name="topic">주간동향
+			</label> 
+			<label for="mail3"> 
+				<input type="checkbox" id="mail3" name="topic">오늘소식
+			</label> 
+			&nbsp;<label for="topic" class="error"></label>
+		</fieldset>
+		<p>
+			<button type="submit">제출</button>
+		</p>
+	</fieldset>
+</form>

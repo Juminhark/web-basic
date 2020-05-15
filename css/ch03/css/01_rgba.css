@@ -1,0 +1,15 @@
+@charset "utf-8";
+div{
+	width: 300px;
+	deight: 50px;
+}
+p{
+	font-weight: bold;
+	color: white;
+}
+.box1{
+	background: rgb(0, 0, 255);
+}
+.box2{
+	background: rgb(0, 0, 255, 0.5);
+}

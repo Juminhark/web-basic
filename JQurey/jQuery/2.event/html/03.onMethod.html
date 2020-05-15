@@ -1,0 +1,64 @@
+<div id="nav">
+	<button type="button">add Box</button>
+</div>
+<div id="wrapper">
+	<div class="box out">
+		<p>mouseout</p>
+	</div>
+	<div class="box out">
+		<p>mouseout</p>
+	</div>
+</div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../03.onMethod.js"></script>
+
+<style>
+html * {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	margin-left: 300px;
+}
+
+#nav>button {
+	margin-left: 300px;
+}
+
+.box {
+	width: 150px;
+	height: 150px;
+	border: 2px solid blue;
+}
+
+.box.over {
+	background-color: red;
+}
+
+.box.out {
+	background-color: green;
+}
+
+.box.down {
+	background-color: blue;
+}
+
+.box.up {
+	background-color: pink;
+}
+
+.box.click {
+	background-color: brown;
+}
+
+.box>p {
+	padding: 30px;
+	color: white;
+}
+
+#nav {
+	margin: 20px;
+}
+</style>

@@ -1,0 +1,8 @@
+form input.error, from textarea.error{
+  border:1px dashed red;
+}
+
+form label.error{
+  margin-left:10px;
+  color:red;
+}

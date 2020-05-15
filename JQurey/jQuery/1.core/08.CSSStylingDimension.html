@@ -1,0 +1,56 @@
+<style>
+	.big{font-size:200px;color:blue;}
+	.outline{border:1px soild red;}
+</style>
+<h1>HELLO</h1>
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	//Getting CSS properties.
+	console.log($("h1").css("fontSize"));   //Returns a string such as "32px".
+	console.log($("h1").css("font-size"));  //Also works.
+	
+	// Setting an individual property.
+	$("h1").css("fontSize", "100px");
+	
+	//Working with classes.
+	var h1 = $("h1");
+	
+	h1.addClass("big");
+	h1.removeClass("big");
+	h1.toggleClass("big");
+	
+	if(h1.hasClass("big")){
+		console.log("BIG");
+	}
+	
+	// Setting multiple properties.
+	// Note the style of the argument on the second line - it is an object that
+	// contains multiple properties. This is a common way to pass multiple arguments
+	// to a function, and jQuery setter methods accept objects to set multiple values at once.
+	$("h1").css({
+		fontSize: "100px",
+		color: "red"
+	});
+	
+	
+	// Basic dimensions methods.
+	// Sets the width of all <h1> elements.
+	$("h1").addClass("outline");
+	$("h1").width("200px");
+	
+	// Gets the width of the first <h1> element.
+	console.log($("h1").width());
+	
+	// Sets the height of all <h1> elements.
+	$("h1").height("100px");
+	
+	// Gets the height of the first <h1> element.
+	console.log($("h1").height());
+	
+	// Returns an object containing position information for
+	// the first <h1> relative to its "offset (positioned) parent".
+	console.log($("h1").position());
+
+})
+</script>

@@ -1,0 +1,112 @@
+<!-- 값을 뽑아내서 반복 -->
+<ul>
+	<li id="a"><a href="#">Link 1</a></li>
+	<li id="b"><a href="#">Link 2</a></li>
+	<li id="c"><a href="#">Link 3</a></li>
+</ul>
+<form><input type="text" value="hello"/></form>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+// $.each() is a generic iterator function for looping over object, arrays,
+// and array-like objects. Plain objects are iterated via their named properties
+// while arrays and array-like objects are iterated via their indices.
+$(function(){
+	var sum = 0;
+	var arr = [ 1, 2, 3, 4, 5 ];
+	for(var i = 0, I = arr.length; i < I; i++){
+		sum += arr [i];
+	}
+	console.log(sum);   //15
+	
+	// Can be replaced with this:
+	var sum = 0;
+	$.each(arr, function(index, value){
+		sum += value;
+	});
+	console.log(sum);   //15
+	
+	// In addition, given:
+	var sum = 0;
+	var obj = {
+		foo: 1,
+		bar: 2
+	}
+	
+	for(var item in obj){
+		sum += obj[ item ];
+	}
+	console.log(sum);   //3
+	
+	// Can be replaced with this:
+	var sum = 0;
+	$.each(obj, function(key, value){
+		sum += value;
+	});
+	console.log(sum);   //3
+	
+	// .each(): Note that $.each() is for plain objects, arrays, array-like objects
+	// that are not jQuery collections. For jQuery collections, use .each().
+	$("li").each(function(index, element){
+		console.log($(this).text());    //Link1  Link2  Link3 
+	});
+	
+	
+	// For example, these are equivalent:
+	$("input").each(function(i, el){
+		var elem = $(el);
+		elem.val(elem.val() + "%");
+	});
+	
+	$("input").val(function(index, value){
+		return value + "%";
+	});
+	
+	// .map():Anytime we want to create an array or concatenatrd string based
+	// on all matched elements in our jQuery selector, we`re better served using .map().
+	var newArr = [];
+	$("li").each(function(){
+		newArr.push(this.id);
+	});
+	console.log(newArr);   //[ "a", "b", "c" ]
+	
+	// Notice the .get() chained at the end. .map() actullay returns a jQuery
+	// -wrapped collection, even if we return strings out of the callback.
+	// We need to use the argument-less version of .get() in order to return a basic
+	// Javascript array that we can world
+	// To concatenate into a string, we can chain the plain JS .join() array method after .get().
+	console.log(
+		$("li").map(function(){
+			return this.id;
+		})
+	);  //["a", "b", "c"] preObject: r.fn.init(3)  jquery 객체
+	
+	console.log(
+		$("li").map(function(){
+			return this.id;
+		}).get()		
+	);  //["a","b","c"] array(3)  javascript 객체
+	
+	
+	// $.map() works on plain Javascript arrays while .map() works on jQuery element collections.
+	// Because it`s working on a plain array, $.map() returns a plain array and .get() does not need to be called
+	var arr = [{
+		id: "a",
+		tagName: "li"
+	}, {
+		id: "b",
+		tagName: "li"
+	}, {
+		id: "c",
+		tagName: "li"
+	}];
+	
+	// Also returns ["a", "b", "c"] Array(3)
+	// Note that the value comes first with $.map
+	console.log(
+		$.map(arr, function(value, index) {
+			return value.id;
+			})
+		);	
+});
+</script>

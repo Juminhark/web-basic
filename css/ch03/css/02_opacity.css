@@ -1,0 +1,44 @@
+@charset "utf-8";
+body{
+	background-color: #036;
+}
+h1{
+	font-family: Arial, Helvertica, sans-serif;
+	font-size: 3em;
+}
+.op0{
+	color: rgb(255, 255, 255);
+}
+.op1{
+	color: rgba(255, 255, 255, 1.0);
+}
+.op2{
+	color: rgba(255, 255, 255, 0.9);
+}
+.op3{
+	color: rgba(255, 255, 255, 0.8);
+}
+.op4{
+	color: rgba(255, 255, 255, 0.7);
+}
+.op5{
+	color: rgba(255, 255, 255, 0.6);
+}
+.op6{
+	color: rgba(255, 255, 255, 0.5);
+}
+.op7{
+	color: rgba(255, 255, 255, 0.4);
+}
+.op8{
+	color: rgba(255, 255, 255, 0.3);
+}
+.op9{
+	color: rgba(255, 255, 255, 0.2);
+}
+.op10{
+	color: rgba(255, 255, 255, 0.1);
+}
+.op11{
+	color: rgba(255, 255, 255, 0);
+}

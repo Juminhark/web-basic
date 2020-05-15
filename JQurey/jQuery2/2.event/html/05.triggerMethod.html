@@ -1,0 +1,59 @@
+<div id="nav">
+	<input class="mouseover" type="button" value="mouseover" /> 
+	<input class="mouseout" type="button" value="mouseout" /> 
+	<input class="click" type="button" value="click" />
+</div>
+<div id="box" class="out">
+	<p>mouseout</p>
+</div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../05.triggerMethod.js"></script>
+
+<style>
+html * {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin-left: 300px;
+}
+
+#box {
+	width: 300px;
+	height: 300px;
+	border: 2px solid blue;
+	margin-top: 30px;
+}
+
+#box.over {
+	background-color: red;
+}
+
+#box.out {
+	background-color: green;
+}
+
+#box.down {
+	background-color: blue;
+}
+
+#box.up {
+	background-color: pink;
+}
+
+#box.click {
+	background-color: brown;
+}
+
+#box>p {
+	padding: 30px;
+	color: white;
+}
+
+#trigger {
+	padding: 10px;
+	width: 200px;
+}
+</style>

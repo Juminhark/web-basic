@@ -1,0 +1,15 @@
+@charset "utf-8";
+body {
+	background-color: #09280B;
+}
+@font-face{ 
+	font-family:'myBand';
+	src:url('../img/Band.eot');
+	src:url('../img/Band.ttf') format('truetype');
+	src:url('../img/Band.woff') format('woff');
+}
+h1{
+	font-family:myBand;
+	font-size:3em;
+	color:yellow;
+}

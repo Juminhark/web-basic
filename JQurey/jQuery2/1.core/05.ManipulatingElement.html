@@ -1,0 +1,78 @@
+<ul id="myList">
+	<li>0</li>
+	<li>1</li>
+</ul>
+<div id="myDiv">
+	<p>0</p>
+	<p>1</p>
+	<a></a>
+</div>
+<div id="content"></div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	$("#myDiv p:first").html("New <strong>first</strong> paragraph!");
+	
+	$("#myList li:first").appendTo("#myList");
+	//주어 객체를 빼서 목적어 객체에 추가한다
+	
+	$("#myList").append($("#myList li:first"));
+	//위에꺼 반대로 목적어 객체를 주어에 추가
+	
+	$("#myList li:first").clone().appendTo("#myList");
+	// 주어를 복제해서 목적어 객체에 추가한다
+	
+	//css selector
+	//html 을 쓰면 추가
+ 	$("<p> This is a new paragraph</p>");
+	$("<li class=\"new\">new list ltem</li>");
+	
+	$("<a/>",{
+		html: "This is a <strong>new</strong> link",
+		"class": "new",
+		href: "foo.html"
+	});
+	
+	var myNewElement = $("<p>New element</p>");
+	myNewElement.appendTo("#content");
+	myNewElement.insertAfter("ul:last");
+	$("ul").last().after(myNewElement.clone());
+	
+	$("ul").append("<li>list item</li>");
+	
+	var myItems = [];
+	var myList = $("#myList");
+	for(var i = 0; i < 100; i++){
+		myItems.push("<li>item" + i + "</li>");
+	}
+	myList.append(myItems.join(""));
+	
+	// [Manipulating(조작) Attributes(결과)]
+	// Manipulating a single attribute.
+	$("#myDiv a:first").attr("href","newDestination.html"); // .attr("속성명","속성값")
+	console.log($("#myDiv a:first").attr("href"));
+	
+	// Manipulating multiple attributes.
+	$("#myDiv a:first").attr({
+		href: "newDestination.html",
+		rel: "nofollow"
+	});
+	
+	
+	// Using a function to determine an attribute`s new value.
+	$("#myDiv a:first").attr({
+		rel: "nofollow",
+		href: function(idx, href){
+			return "/new/" + href;
+		}
+	});
+	console.log($("#myDiv a:first").attr("href")); // /new/newDestination.html
+	
+	$("#myDiv a:first").attr("href", function(idx, href){
+		return "/new/" + href;
+	});
+	console.log($("#myDiv a:first").attr("href")); // /new/newDestination.html
+	
+})
+</script>

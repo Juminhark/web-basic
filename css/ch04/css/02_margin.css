@@ -1,0 +1,19 @@
+.content1{
+	border: 1px solid black;
+	background: lightyellow;
+	padding: 10px;
+}
+.content2{
+	border: 1px solid black;
+	background:lightyellow;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	padding: 10px 30px;
+}
+.content3{
+	border: 1px solid black;
+	background:lightyellow;
+	margin: 20px 10px 0 100px;
+	padding: 10px 30px 10px 50px;
+}
+/* margin 20px(상) 10px(우) 0(하) 100px(좌) 시계방향으로 */

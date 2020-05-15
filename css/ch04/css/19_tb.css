@@ -1,0 +1,10 @@
+#tb1{
+	width: 300px;
+	table-layout:fixed; /* fixed:셀 너비 고정, ,auto: 셀 너비 자종조정(기본값)*/
+	word-break:break-all;/* 단어를 너비에 맞춰서 쪼개기 */
+	height: auto;
+}
+th, td{
+	border: 1px solid black;
+	padding: 5px;
+}

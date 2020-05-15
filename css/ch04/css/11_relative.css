@@ -1,0 +1,27 @@
+/* position은 static이 기본값 */
+
+@charset "utf-8";
+div{
+	width: 200px;
+	height: auto;
+	margin: 10px 5px;
+	apdding: 5px;
+	border: 1px solid black;
+}
+#cont1{
+	position: relative;
+	background: lightyellow;
+}
+/* position relative는 상대적. 기준점은 static으로 원래 있어야할곳. */
+#cont2{
+	position: relative; /* relative 설정되면 left top이 설정되야한다. */
+	left: 20px; /* 원래 위치에서 오른쪽으로 20px 떨어져서 배치 */
+	top: -20px; /* 원래 위치에서 위로 20px 떨어져서 배치 */
+	background: lightgreen;
+}
+#cont3{
+	position: relative; /* relative 설정되면 left top이 설정되야한다. */
+	left: -30px; /* 원래 위치에서 왼쪽으로 30px 떨어져서 배치 */
+	top: 20px; /* 원래 위치에서 아래로 20px 떨어져서 배치 */
+	background: lightblue;
+}
