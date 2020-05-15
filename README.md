@@ -1,43 +1,20 @@
-# web-basic
+# WEB-basic
 
-## [README.ms 작성](https://pandao.github.io/editor.md/en.html#Features)
+[TOCM]
 
-## VSC Setting
-html crome으로 열기 : ctrl + shift + p > Configure Task > Create tasks.json file from template > other
+## [README.md 작성](https://pandao.github.io/editor.md/en.html#Features)
 
-```ts
-"tasks": [
-{
+# VSC Setting
 
-"label": "Chrome",
+## step1 : extensions
 
-"type": "process",
-
-"command": "chrome.exe",
-
-"windows": {
-
-"command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-
-},
-
-"args": [
-
-"${file}"
-
-],
-
-"problemMatcher": [],
-
-"group": {
-
-"kind": "build",
-
-"isDefault": true
-
-}
-
-}
-
-]
-```
+- waka time
+- markdown all in one
+- material theme
+- material icon theme
+- ES7 React/Redux/GraphQL/React-Native snippets
+- [Prettier - Code formatter](https://www.youtube.com/watch?v=iGWwmVmvFPk)
+- Color Info
+- Live Server
+- Code Spell Checker
+- Rainbow Brackets
