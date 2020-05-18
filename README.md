@@ -17,5 +17,6 @@
 - indent-rainbow
 - TODO Highlight
 - Import Cost
+- Auto Rename Tag
 
 ## [README.md 작성](https://pandao.github.io/editor.md/en.html#Features)
