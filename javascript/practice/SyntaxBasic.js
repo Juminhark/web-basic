@@ -8,7 +8,7 @@
 /*********************************/
 
 /**********  Whitespace  ***********/
-//script안이 아닌 Whitespace는 의미가 없다. Whitespace는 또한 JavaScipt에서 무시된다.
+// TODO: script안이 아닌 Whitespace는 의미가 없다. Whitespace는 또한 JavaScript에서 무시된다.
 var hello = 'Hello';
 var world = 'World!';
 
@@ -34,7 +34,7 @@ var _my_awesome_variable_$ = 'e';
 
 // 변수 정의 Variable Definition
 var test = 'test';
-var test2 = function (a) {
+var test2 = function (any) {
 	return console.log(a);
 };
 var test3 = test2(test);

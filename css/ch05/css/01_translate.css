@@ -1,20 +1,20 @@
 ﻿@charset "utf-8";
-div{
-	float:left;
-	margin:10px;
-	width:150px;
+div {
+	float: left;
+	margin: 10px;
+	width: 150px;
 	height: 190px;
-	background-color: rgba:(0,0,255,0.3);
+	background-color: rgba(0, 0, 255, 0.3);
 }
-.two img:hover{
+.two img:hover {
 	transform: translate(10px, 10px);
 }
-.three{
+.three {
 	perspective: 100px;
 }
-img.i1:hover{
+img.i1:hover {
 	transform: translate3d(0, 0, 10px); /* 3d는 z축 추가 */
 }
-img.i2:hover{
+img.i2:hover {
 	transform: translate3d(0, 0, -10px);
 }

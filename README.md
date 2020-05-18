@@ -14,5 +14,8 @@
 - Live Server
 - Code Spell Checker
 - Rainbow Brackets
+- indent-rainbow
+- TODO Highlight
+- Import Cost
 
 ## [README.md 작성](https://pandao.github.io/editor.md/en.html#Features)
