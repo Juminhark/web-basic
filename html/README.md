@@ -46,4 +46,16 @@
 ```
 
 - img vs background-image(css) : image가 문서의 구성요소로써 존재할 경우 / 내용과 관계없는 스타일 요소일 경우
-- button vs a :
+- button vs a
+
+```js
+// <button></button> : 사용자의 특정한 액션을 위해서
+// <a></a> : 링크가 필요할때
+```
+
+- table vs css
+
+```js
+// <table> : 행열. 다수의 데이터 표기용
+// css : Flex, Grid 스타일용
+```
