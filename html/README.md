@@ -61,3 +61,27 @@
 ```
 
 ## [this](https://www.youtube.com/watch?v=kb0Af7dzCTs)
+
+```js
+<script>
+	console.log(this)
+</script>
+
+// window
+
+<script>
+  console.log(window === this)
+</script>
+
+// true
+
+<script>
+  function checkThis() {
+    console.log(this)
+  }
+
+  checkThis()
+</script>
+
+// window
+```
