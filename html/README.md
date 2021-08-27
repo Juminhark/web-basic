@@ -63,18 +63,19 @@
 ## [this](https://www.youtube.com/watch?v=kb0Af7dzCTs)
 
 ```js
+// window
 <script>
 	console.log(this)
 </script>
 
-// window
 
+// true
 <script>
   console.log(window === this)
 </script>
 
-// true
 
+// window
 <script>
   function checkThis() {
     console.log(this)
@@ -83,5 +84,41 @@
   checkThis()
 </script>
 
+
+// {value: 0, checkThis: ƒ}
+<script>
+  const anObject = {
+    value: 0,
+    checkThis() {
+      console.log(this);
+    },
+  };
+
+  anObject.checkThis();
+</script>
+
 // window
+<script>
+  const anObject = {
+    value: 0,
+    checkThis() {
+      function doit() {
+        console.log(this);
+      }
+      doit();
+    },
+  };
+
+  anObject.checkThis();
+</script>
+
+// undefined
+<script>
+  'use strict';
+  function checkThis() {
+    console.log(this);
+  }
+
+  checkThis();
+</script>
 ```

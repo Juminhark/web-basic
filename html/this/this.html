@@ -8,17 +8,12 @@
 	</head>
 	<body>
 		<script>
-			const anObject = {
-				value: 0,
-				checkThis() {
-					function doit() {
-						console.log(this);
-					}
-					doit();
-				},
-			};
+			'use strict';
+			function checkThis() {
+				console.log(this);
+			}
 
-			anObject.checkThis();
+			checkThis();
 		</script>
 	</body>
 </html>
