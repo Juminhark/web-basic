@@ -1,7 +1,5 @@
 # WEB-basic
 
-## https://www.boostcourse.org/web316/lecture/16667?isDesc=false
-
 # HTML
 
 > HTML은 Element의 조합이다.
@@ -17,7 +15,7 @@
 > attributes : HTML Element의 추가적인 속성관리 요소
 
 ```js
-<img src="" width="300" height="500" />
+<img src='' width='300' height='500' />
 ```
 
 ## Reference
