@@ -1,5 +1,31 @@
 # WEB-basic
 
+## https://www.boostcourse.org/web316/lecture/16667?isDesc=false
+
+# HTML
+
+> HTML은 Element의 조합이다.
+
+## HTML Element
+
+> 형식 :
+
+```js
+<tag name> content </tag name>
+```
+
+> attributes : HTML Element의 추가적인 속성관리 요소
+
+```js
+<img src="" width="300" height="500" />
+```
+
+## Reference
+
+- [한시간만에 끝내는 HTML+CSS 입문](https://www.youtube.com/watch?v=cb7VlXqFla4)
+
+---
+
 ## Web tool
 
 - hosting & deployment
@@ -53,3 +79,7 @@
   - [caniuse.com]
   - [image compressor]
   - [css-tricks]
+
+```
+
+```
