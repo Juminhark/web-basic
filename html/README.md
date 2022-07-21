@@ -76,83 +76,25 @@
 // css : Flex, Grid 스타일용
 ```
 
-## [this](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this)
+### 1. 레이아웃을 위한 tag
 
-- [What is 'this'](https://www.youtube.com/watch?v=kb0Af7dzCTs)
+![layout](./img/layout.jpg)
 
-```js
-// window
-<script>
-	console.log(this)
-</script>
+- header
+- section
+- nav
+- footer
+- aside
 
+### 2. html 구조설계
 
-// true
-<script>
-  console.log(window === this)
-</script>
+- 현업에서는 Presentation 문서형태의 기획서나 디자인 파일을 받아서 그것을 기반으로 HTML개발을 시작
+- 주어진 화면을 구조를 분석하여 구현
+- 상단/본문/네비게이션 이런 식으로 큰 부분부터 분리
+- 목록, 이미지, 문단등 나타낼것들의 적절한 태그 사용
 
+### 3. class와 id 속성
 
-// window
-<script>
-  function checkThis() {
-    console.log(this)
-  }
-
-  checkThis()
-</script>
-
-
-// {value: 0, checkThis: ƒ}
-<script>
-  const anObject = {
-    value: 0,
-    checkThis() {
-      console.log(this);
-    },
-  };
-
-  anObject.checkThis();
-</script>
-
-// window
-<script>
-  const anObject = {
-    value: 0,
-    checkThis() {
-      function doit() {
-        console.log(this);
-      }
-      doit();
-    },
-  };
-
-  anObject.checkThis();
-</script>
-
-// undefined
-<script>
-  'use strict';
-  function checkThis() {
-    console.log(this);
-  }
-
-  checkThis();
-</script>
-
-// window
-<script>
-  'use strict';
-  function checkThis() {
-    console.log(this);
-  }
-
-  checkThis.call(this);
-</script>
-```
-
-## [Strict mode](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode)
-
-- 기존에는 조용히 무시되던 에러들을 throwing합니다.
-- JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로잡습니다. 가끔씩 엄격 모드의 코드는 비-엄격 모드의 동일한 코드보다 더 빨리 작동하도록 만들어집니다.
-- 엄격 모드는 ECMAScript의 차기 버전들에서 정의 될 문법을 금지합니다.
+- ID : 고유한 속성으로 한 HTML 문서에 하나만 사용 가능합니다. 검색에도 용이
+- Class : 하나의 HTML문서 안에 중복해서 사용 가능합니다.
+- 약속(convention)을 만들어서 규칙 부여

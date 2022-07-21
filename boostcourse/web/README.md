@@ -26,7 +26,7 @@ SQL
 웹 분야 개발자가 되려면 배워야할것들
 
 1. javascipt
-2. html/css 구조 설계 스타일
+2. HTML/CSS 구조 설계 스타일
 3. 프로그래밍 언어 1개는 자유자제로 사용 / 역사적인 배경
 
 --
@@ -65,7 +65,7 @@ stateless방식 : response가 완료되면 연결을 끊는 방식
 ip : 집주소
 포트 : 방
 
-![HTTP작동방식](/boostcourse/http.png)
+![HTTP작동방식](./img/http.png)
 
 - 요청메서드 : GET / PUT / POST / OPTIONS
 - 요청 URL : 요청하는 자원의 위치
@@ -95,7 +95,7 @@ TRACE : 클라이언트의 요청을 그대로 반환한다. 예컨데 echo 서�
 - 적절한 배치와 일괄된 디자인등을 제공해야 한다
 - 사용자 요청을 잘 반영해야한다
 
-### html 예시
+### HTML 예시
 
 ```js
 <h1> 우리집에 오신걸 환영합니다 </h1>
@@ -108,7 +108,7 @@ TRACE : 클라이언트의 요청을 그대로 반환한다. 예컨데 echo 서�
 <footer>email : crong@kdd123.com</footer>
 ```
 
-### css 예시
+### CSS 예시
 
 ```js
 .window-header-icon {
@@ -155,7 +155,7 @@ for (var i = 0; i < cardList.length; i++) {
 
 ### browser의 동작
 
-![브라우저](/boostcourse/web/browser.png)
+![브라우저](./img/web/browser.png)
 
 - 브라우저는 월드와이드웹(WWW)에서 정보를 검색, 표현하고 탐색하기 위한 소프트웨어입니다.
 
@@ -165,7 +165,7 @@ for (var i = 0; i < cardList.length; i++) {
 
 - 브라우저마다 서로 다른 엔진을 포함하고 있습니다.
 
-![mainflow](/boostcourse/web/mainflow.png)
+![mainflow](./img/web/mainflow.png)
 
 - HTML을 해석해서 DOM Tree를 만들고, CSS를 해석해서 역시 CSS Tree(CSS Object Model)을 만듭니다.
 
@@ -179,4 +179,115 @@ for (var i = 0; i < cardList.length; i++) {
 
 - compoiler에서 하는 영역 : parsing => token을 만들고 syntax tree에따라 처리
 
-![cssboxmodel](/boostcourse/web/css-box-model.jpg)
+![CSSboxmodel](./img/web/CSS-box-model.jpg)
+
+## 웹서버
+
+- 웹 서버 : 웹 서버 소프트웨어가 동작하는 컴퓨터
+- 웹 서버의 가장 중요한 기능 : Client가 요청하는 HTML 문서나 각종 Resource를 전달.
+- 웹 브라우저나 웹 크롤러가 요청하는 리소스는 컴퓨터에 저장된 정적(static)인 데이터이거나 동적인 결과가 될 수 있다.
+- Apache, Nginx, Microsoft IIS 등
+
+## WAS(Web Application Server)
+
+- client / server 구조
+  ![client/server](./img/client_server.png)
+
+- DBMS(DataBase Management System)
+  ![dbms](./DBMS.png)
+
+- MiddleWare : 비즈니스 로직을 클라이언트와 DBMS사이의 미들웨어 서버에서 동작하도록 함으로써 클라이언트는 입력과 출력만 담당
+  ![middleware](./img/middleware.png)
+
+- WAS : client의 요청 중 web applicaion이 동작하도록 지원하는 목적을 가진 middleware
+  ![was](./was.png)
+
+### 웹서버 vs WAS
+
+- WAS도 보통 자체적으로 웹 서버 기능을 내장하고 있습니다.
+- 현재는 WAS가 가지고 있는 웹 서버도 정적인 콘텐츠를 처리하는 데 있어서 성능상 큰 차이가 없습니다.
+- 규모가 커질수록 웹 서버와 WAS를 분리합니다.
+- 자원 이용의 효율성 및 장애 극복, 배포 및 유지보수의 편의성을 위해 웹서버와 WAS를 대체로 분리합니다.
+
+# HTML
+
+### 1. 레이아웃을 위한 tag
+
+![layout](./img/layout.jpg)
+
+- header
+- section
+- nav
+- footer
+- aside
+
+### 2. HTML 구조설계
+
+- 현업에서는 Presentation 문서형태의 기획서나 디자인 파일을 받아서 그것을 기반으로 HTML개발을 시작
+- 주어진 화면을 구조를 분석하여 구현
+- 상단/본문/네비게이션 이런 식으로 큰 부분부터 분리
+- 목록, 이미지, 문단등 나타낼것들의 적절한 태그 사용
+
+### 3. class와 id 속성
+
+- ID : 고유한 속성으로 한 HTML 문서에 하나만 사용 가능합니다. 검색에도 용이
+- Class : 하나의 HTML문서 안에 중복해서 사용 가능합니다.
+- 약속(convention)을 만들어서 규칙 부여
+
+# CSS
+
+```js
+ selector {
+   property : vlaue;
+ }
+```
+
+- inline : tag 안에 attributes로 존재
+- internal : style 태그로 존재
+- external : 외부 파일로 존재
+- inline -> internal -> external : 순서대로 우선순의를 가짐
+
+### 상속과 우선순위 결정
+
+- 상위에 적용한 style은 하위에도 반영된다
+- box-model의 attributes(width, height, margin, border, padding)은 상속되지않는다.
+- [cascading](https://developer.mozilla.org/ko/docs/Web/CSS/Specificity)
+  - inline -> internal -> external 우선순위
+  - id -> class -> element 우선순위
+
+### CSS Selector
+
+- HTML 요소를 tag, id, class, html 태그속성등을 통해 쉽게 찾아주는 방법
+- id : #id { color : red; }
+- class : .class { color : blue; }
+- 그룹선택 : h1, span { color : red; }
+- 요소선택(공백) : 자손 선택
+- 자식선택(>) : 자식은 바로 하위 element
+- nth-child(n) : 부모 element의 모든자식중 n번째
+- nth-of-type(n) : 부모 element의 특정 자식 elements 중 n번째
+
+```js
+
+// pseudo-class : 선택자로 추가하는 키워드로, 선택한 요소가 특별한 상태여야 만족
+
+/* Any button over which the user's pointer is hovering */
+button:hover {
+ color: blue;
+}
+
+// :hover 를 사용하면 포인터를 올렸을떄에만 글씨색을 바꾸고 싶을떄 사용
+
+```
+
+```js
+<div id='kin'>
+  <p></p>
+  <span></span>
+  <p></p>
+  <span></span>
+  <p></p>
+</div>
+
+// #kin > p:nth-child(5) : 5번째 자식인 p 선택
+// #kin > span:nth-of-type(2) : 4번째 자식인 span 선택
+```
