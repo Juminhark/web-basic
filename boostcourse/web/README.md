@@ -234,7 +234,7 @@ for (var i = 0; i < cardList.length; i++) {
 - Class : 하나의 HTML문서 안에 중복해서 사용 가능합니다.
 - 약속(convention)을 만들어서 규칙 부여
 
-# CSS
+# [CSS](https://www.w3schools.com/css/default.asp)
 
 ```js
  selector {
@@ -291,3 +291,16 @@ button:hover {
 // #kin > p:nth-child(5) : 5번째 자식인 p 선택
 // #kin > span:nth-of-type(2) : 4번째 자식인 span 선택
 ```
+
+### element가 배치되는 방법(css layout)
+
+- element를 화면에 배치 : layout 작업, Rendering 과정
+- display : block, inline, lnline-block
+- position : static, relative, absolute, fixed
+- margin
+- float : 원래 flow에서 벗어난 특별한 배치
+- 크기 : block element의 크기는 기본적으로 부모의 크기만큼을가짐
+- box-model : margin, padding, border, outline, box-shadow
+  ![box-model](./img/css-box-model.jpg)
+
+- - css-grid나 flex속성등을 최근에 활용하며 float를 잘 사용하지않는다.
