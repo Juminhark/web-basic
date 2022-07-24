@@ -1,20 +1,20 @@
-과정에서 배울수있는것.
-cs와 프로그래밍에 대한지식
-커리어 전환을 원하는 개발자
-JAVA, HTML/CSS, SQL의 기초적인 핵심 문법
+## 과정에서 배울수있는것.
+ - cs와 프로그래밍에 대한지식
+ - 커리어 전환을 원하는 개발자
+ - JAVA, HTML/CSS, SQL의 기초적인 핵심 문법
 
-과정 핵심
-HTML/CSS
-Javascript
-JAVA
-Spring
-Spring MVC
-Spring JDBC
-SQL
+## 과정 핵심
+ - HTML/CSS
+ - Javascript
+ - JAVA
+ - Spring
+ - Spring MVC
+ - Spring JDBC
+ - SQL
 
 --
 
-웹(FE/BE)분야의 개발자는 어떤 역략이 중요한가
+## 웹(FE/BE)분야의 개발자는 어떤 역략이 중요한가
 
 1. CSS와 같은 선언적인 프로그래밍에도 익숙해야한다
 2. interactive한 웹개발 방법과 성능에 유리한 패턴방식 이해
@@ -23,7 +23,7 @@ SQL
 
 \*\* interactive : 활동적인 / 쌍방향
 
-웹 분야 개발자가 되려면 배워야할것들
+## 웹 분야 개발자가 되려면 배워야할것들
 
 1. javascipt
 2. HTML/CSS 구조 설계 스타일
@@ -31,15 +31,15 @@ SQL
 
 --
 
-기계어(Machine Language) : 0,1 로 이루어진 언어
-어셈블리어(Assembly Language) : 기호를 Compiler를 통해 기계어로 바꾸어 사용하는 프로그램언어
+ - 기계어(Machine Language) : 0,1 로 이루어진 언어
+ - 어셈블리어(Assembly Language) : 기호를 Compiler를 통해 기계어로 바꾸어 사용하는 프로그램언어
 
 ## 웹의 동작(HTTP Protocol 이해)
 
-http
-request 형식
-request method
-response 형식
+ - http
+ - request 형식
+ - request method
+ - response 형식
 
 ## WWW(World Widw Web)
 
@@ -49,21 +49,19 @@ response 형식
 
 ## HTTP 작동방식
 
-client 가 server에 request를 보내면 server는 response를 client에게 보냄
+ - client 가 server에 request를 보내면 server는 response를 client에게 보냄
 
-stateless방식 : response가 완료되면 연결을 끊는 방식
-장점 : 불특정 다수를 대상으로 하는 서비스에 적합. 최대 연결수보다 많은 요청과 응답을 처리 가능
-단점 : 연결을 끊어버려서 이전 client 상황을 알수없다.
-
-이런 단점을 해결하기위해 Cookie와 같은 기술이 등장
+ - stateless방식 : response가 완료되면 연결을 끊는 방식
+ - 장점 : 불특정 다수를 대상으로 하는 서비스에 적합. 최대 연결수보다 많은 요청과 응답을 처리 가능
+ - 단점 : 연결을 끊어버려서 이전 client 상황을 알수없다.
+ - 이런 단점을 해결하기위해 Cookie와 같은 기술이 등장
 
 ## URL(Uniform Resource Locator)
 
-접근프로토콜 :// ip 주소 또는 도메인 주소 / 문서의 경로 / 문서이름
-=> 특정 웹 서버에 특정파일에 접근하기 위한 경로 / 인터넷상의 자원의 위치
+ - 접근프로토콜 :// ip 주소 또는 도메인 주소 / 문서의 경로 / 문서이름 => 특정 웹 서버에 특정파일에 접근하기 위한 경로 / 인터넷상의 자원의 위치
 
-ip : 집주소
-포트 : 방
+ - ip : 집주소
+ - 포트 : 방
 
 ![HTTP작동방식](./img/http.png)
 
@@ -303,4 +301,4 @@ button:hover {
 - box-model : margin, padding, border, outline, box-shadow
   ![box-model](./img/css-box-model.jpg)
 
-- - css-grid나 flex속성등을 최근에 활용하며 float를 잘 사용하지않는다.
+- css-grid나 flex속성등을 최근에 활용하며 float를 잘 사용하지않는다.
