@@ -397,7 +397,13 @@ status-line = HTTP-version SP staus-code SP reson-phrase CRLF
 
 ## LifecycleServlet
 
-Reference
+![servlet_lifecycle](./img/servlet_lifecycle.png)
+
+## 요청과 응답
+
+![request_response](./img/request_response.png)
+
+# Reference
 
 - [Web, Network](https://velog.io/@tjswlsdl135/%EC%9B%B9%EA%B3%BC-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC)
 - [Cookie, Session, WebStorage](https://jongminfire.dev/cookie-session-web-storage-local-storage-session-storage)
