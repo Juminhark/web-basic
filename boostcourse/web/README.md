@@ -1,16 +1,18 @@
 ## 과정에서 배울수있는것.
- - cs와 프로그래밍에 대한지식
- - 커리어 전환을 원하는 개발자
- - JAVA, HTML/CSS, SQL의 기초적인 핵심 문법
+
+- cs와 프로그래밍에 대한지식
+- 커리어 전환을 원하는 개발자
+- JAVA, HTML/CSS, SQL의 기초적인 핵심 문법
 
 ## 과정 핵심
- - HTML/CSS
- - Javascript
- - JAVA
- - Spring
- - Spring MVC
- - Spring JDBC
- - SQL
+
+- HTML/CSS
+- Javascript
+- JAVA
+- Spring
+- Spring MVC
+- Spring JDBC
+- SQL
 
 --
 
@@ -31,15 +33,15 @@
 
 --
 
- - 기계어(Machine Language) : 0,1 로 이루어진 언어
- - 어셈블리어(Assembly Language) : 기호를 Compiler를 통해 기계어로 바꾸어 사용하는 프로그램언어
+- 기계어(Machine Language) : 0,1 로 이루어진 언어
+- 어셈블리어(Assembly Language) : 기호를 Compiler를 통해 기계어로 바꾸어 사용하는 프로그램언어
 
 ## 웹의 동작(HTTP Protocol 이해)
 
- - http
- - request 형식
- - request method
- - response 형식
+- http
+- request 형식
+- request method
+- response 형식
 
 ## WWW(World Widw Web)
 
@@ -49,19 +51,19 @@
 
 ## HTTP 작동방식
 
- - client 가 server에 request를 보내면 server는 response를 client에게 보냄
+- client 가 server에 request를 보내면 server는 response를 client에게 보냄
 
- - stateless방식 : response가 완료되면 연결을 끊는 방식
- - 장점 : 불특정 다수를 대상으로 하는 서비스에 적합. 최대 연결수보다 많은 요청과 응답을 처리 가능
- - 단점 : 연결을 끊어버려서 이전 client 상황을 알수없다.
- - 이런 단점을 해결하기위해 Cookie와 같은 기술이 등장
+- stateless방식 : response가 완료되면 연결을 끊는 방식
+- 장점 : 불특정 다수를 대상으로 하는 서비스에 적합. 최대 연결수보다 많은 요청과 응답을 처리 가능
+- 단점 : 연결을 끊어버려서 이전 client 상황을 알수없다.
+- 이런 단점을 해결하기위해 Cookie와 같은 기술이 등장
 
 ## URL(Uniform Resource Locator)
 
- - 접근프로토콜 :// ip 주소 또는 도메인 주소 / 문서의 경로 / 문서이름 => 특정 웹 서버에 특정파일에 접근하기 위한 경로 / 인터넷상의 자원의 위치
+- 접근프로토콜 :// ip 주소 또는 도메인 주소 / 문서의 경로 / 문서이름 => 특정 웹 서버에 특정파일에 접근하기 위한 경로 / 인터넷상의 자원의 위치
 
- - ip : 집주소
- - 포트 : 방
+- ip : 집주소
+- 포트 : 방
 
 ![HTTP작동방식](./img/http.png)
 
@@ -299,6 +301,105 @@ button:hover {
 - float : 원래 flow에서 벗어난 특별한 배치
 - 크기 : block element의 크기는 기본적으로 부모의 크기만큼을가짐
 - box-model : margin, padding, border, outline, box-shadow
-  ![box-model](./img/css-box-model.jpg)
-
 - css-grid나 flex속성등을 최근에 활용하며 float를 잘 사용하지않는다.
+
+![box-model](./img/css-box-model.jpg)
+
+# 개발환경 설정
+
+## JAVA
+
+### JDK(Java Development Kit)
+
+- - [JDK가 운영체제별로 설치 파일을제공하는 이유](https://doozi0316.tistory.com/entry/1%EC%A3%BC%EC%B0%A8-JVM%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%9E%90%EB%B0%94-%EC%BD%94%EB%93%9C%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B8%EA%B0%80) : Java로 작성된 소스코드(.java)를 Java compile가 Java bytecode(.class)로 변환하고 JVM(Java Virtual Machine)을 통해 OS별로 따로 대응하여 OS에 종속하지 않고 운영될수있다.
+- JRE(Java Runtime Environment)
+
+- ![compile](./img/compile.png)
+
+## HTTP(HyperText Transfer Protocol) 특성
+
+- TCP(Transmission Control Protocol)
+- Byte Strem
+- 3way handshacking : SYN - ACK - ACK
+- IP(Internet Ptotocol)
+- IP주소(Internet Protocol Address) / MAC 주소(Media Access Control Address) : IP 방향 MAC 정확주소
+
+- ARP(Address Resolution Protocol)
+
+- DNS(Domain Name System)
+
+- URI(Uniform Resource Identifier)
+- URL(Uniform Resource Location)
+
+- Client / Server
+
+- Request / Response
+
+###
+
+- Method / URI / Protocol version
+- Header
+- Body
+
+###
+
+- Protocol / 상태코드
+- Header
+- Body
+
+### Stateless - 대용량 처리 가능
+
+- Cookie
+- Session
+- WebStorage(LocalStorage, SessionStorage)
+
+- 지속연결
+
+- HTTP Method
+- GET / POST /DELETE / PUT / PATCH
+- CONNECT / HEAD / OPTIOS / TREACE
+
+### HTTP 상태코드
+
+- 1XX : Informational
+- 2XX : Successful / 200(OK) / 201(Created) / 204(No Content) /
+- 3XX : Redirection / 301 / 302 / 303 / 304 / 307 / 308
+- 4XX : Client Error / 401(Unauthorized) / 403(Forbidden) / 404(Not Found)
+- 5XX : Server Error / 500(Internal Server Error) / 501(Not Implemented) / 503(Server Unavailable)
+
+- [멱등성(Idempotent)](https://developer.mozilla.org/ko/docs/Glossary/Idempotent) : 연산을 여러번 적용하더라도 결과가 달라지지 않는 성질
+
+### RFC2616 -> RFC7230
+
+request-line = method SP request-target SP HTTP-version CRLF
+status-line = HTTP-version SP staus-code SP reson-phrase CRLF
+
+# servlet
+
+- url 요청을 처리하는 프로그램
+- 자바 웹 어플리케이션의 구성요소 중 동적인 처리를 하는 프로그램의 역활
+- WAS에서 동작하는 Java클래스이다
+- HttpServlet 클래스를 상속받아야한다
+- Servlet, JSP로부터 최상의 결과를 얻으려면, 웹 페이지를 개발할 때 이 두가지를 조화롭게 사용해야한다
+- - 웹페이지를 구성하는 화면(HTML)은 JSP로 표현하고, 복잡한 프로그래밍은 서블릿으로 구현
+- - [JSP , Servlet 기본개념](https://codevang.tistory.com/191)
+
+## 자바 웹 어플리케이션(Java Web Application)
+
+- WAS에 설치되어 동작하는 어플리케이션
+- 자바 웹 어플리케이션에는 HTML, CSS, 이미지, JAVA로 작성된 클래스(Servlet도 포함됨, package, 인터페이스 등), 각종설정 파일들이
+
+## Servlet
+
+- servlet 3.0 spec 이상에서 사용하는 방법
+- - web.xml파일을 사용하지않고, 자바 어노테이션(annotation)을 사용
+- - web.xml(3.0 미만) servlet-mapping으로 url 확인 servlet을 통해 실제 class로 접근하여 동적구성 -> annotation이 담당
+
+## LifecycleServlet
+
+Reference
+
+- [Web, Network](https://velog.io/@tjswlsdl135/%EC%9B%B9%EA%B3%BC-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC)
+- [Cookie, Session, WebStorage](https://jongminfire.dev/cookie-session-web-storage-local-storage-session-storage)
+- [HTTP Method와 상태코드](https://kyun2da.dev/CS/http-%EB%A9%94%EC%86%8C%EB%93%9C%EC%99%80-%EC%83%81%ED%83%9C%EC%BD%94%EB%93%9C/)
+- [JSP , Servlet 기본개념](https://codevang.tistory.com/191)
