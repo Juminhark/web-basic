@@ -1,3 +1,17 @@
+# Part1. 웹 프로그래밍 기초
+
+## 웹프론트엔드
+
+- 프론트엔드와 백엔드의 역활과 관계
+- HTML로 웹페이지 구조 설계
+- CSS 레이아웃에 필요한 속성과 활용방법
+
+## 웹 백엔드
+
+- 웹 개발에 대한 이해
+- 개발 환경 설정
+- Servlet
+
 ## 과정에서 배울수있는것.
 
 - cs와 프로그래밍에 대한지식
@@ -371,8 +385,8 @@ button:hover {
 
 ### RFC2616 -> RFC7230
 
-request-line = method SP request-target SP HTTP-version CRLF
-status-line = HTTP-version SP staus-code SP reson-phrase CRLF
+- request-line = method SP request-target SP HTTP-version CRLF
+- status-line = HTTP-version SP staus-code SP reson-phrase CRLF
 
 # servlet
 
