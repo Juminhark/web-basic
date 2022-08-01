@@ -417,6 +417,125 @@ button:hover {
 
 ![request_response](./img/request_response.png)
 
+# JS
+
+## JS의 버전
+
+- JS 버전은 ECMAScript(줄여서ES)의 버전에 따라서 결정되고, 이를 JS 실행 엔진이 반영합니다.
+- ES5, ES6(ES2015).. 이런 식으로 버전을 일컫습니다.
+- 2018년을 중심으로 ES6를 지원하는 브라우저가 많아서 몇 년간 ES6 문법이 표준으로 쓰이고 있습니다.
+- ES6는 ES5문법을 포함하고 있어 하위호환성 문제가 없습니다. 다만 feature별로 지원하지 않는 브라우저가 있을 수 있어 조심해야 합니다.
+
+## [hoising](https://developer.mozilla.org/ko/docs/Glossary/Hoisting)
+
+- interpreter가 변수와 함수의 메모리 공간을 선언전에 미리 할당하는 것을 의미. var로 선언한 변수의 경우 hoisting시 undefined로 변수를 초기화. let 과 const는 선언한 변수의 초기화를 하지 않는다.
+
+- let과 const를 포함한 ECMAScript® 2015 언어 명세 이전의 표준 명세에는 나타나지 않았다. 당시에는 호이스팅이 JavaScript에서 실행 맥락, 특히 생성 및 실행 단계의 동작 방식을 설명하는 일반적인 방법이었다
+
+- Interpreter : 코드를 한줄씩 읽어 내려가며 실행하는 프로그램. 컴파일러와 대조적
+- Compiler : 어떤 언어의 코드 전체를 다른 언어로 바꿔주는과정
+
+```js
+//? CASE 1
+const printName = (firstname) => {
+  const result = inner();
+
+  console.log('name is ' + result);
+
+  const inner = () => {
+    return 'innner value';
+  };
+};
+
+printName(); //!  Cannot access 'inner' before initialization
+
+//? CASE 2
+const printName = (firstname) => {
+  const result = inner();
+
+  console.log('name is ' + result);
+
+  var inner = () => {
+    return 'innner value';
+  };
+};
+
+printName(); //! TypeError: inner is not a function
+
+//? CASE 3
+const printName = (firstname) => {
+  const result = inner();
+
+  console.log('name is ' + result);
+
+  function inner() {
+    return 'innner value';
+  }
+};
+
+printName();
+```
+
+## JS의 type
+
+- 함수안에서의 parameter나 변수는 실행될때 type이 결정된다
+
+```js
+const run = (a) => {
+  console.log(typeof a);
+};
+
+run('run'); // stinrg
+run(false); // boolean
+```
+
+### 연산자
+
+```js
+let name = 'aaa';
+const run = (a) => {
+  console.log(typeof a);
+};
+
+// or : ||  / and : &&
+const crong = name || 'noname';
+const samename = name && name + '1';
+
+// 연산자 - 삼항 연산자
+const reault = crong === 'crong' ? 'true crong' : 'false crong';
+
+// 연산자 - 비교연산자
+// == 값
+// === 값 과 type (사용빈도 높다)
+```
+
+## tip
+
+```js
+const arr = [1, 2, 3];
+
+for (let i = 0, len = arr.length; i < len; i++) {}
+```
+
+## arguments
+
+```js
+function a() {
+  console.log(arguments);
+
+  for (const element in arguments) {
+    console.log(arguments[element]);
+  }
+}
+
+a(1, 2, 3);
+
+// [Arguments] { '0': 1, '1': 2, '2': 3 }
+// 1
+// 2
+// 3
+```
+
 # Reference
 
 - [Web, Network](https://velog.io/@tjswlsdl135/%EC%9B%B9%EA%B3%BC-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC)

@@ -1,3 +1,102 @@
-.main {
-  background-image: rgba(24, 204, 93, 0.801);
+body {
+  background-color: #74d19cd2;
+  height: 100vh;
+}
+
+header,
+main,
+footer {
+  background-color: rgb(255, 255, 255);
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+header {
+  height: 10%;
+}
+
+main {
+  height: 68%;
+  text-align: center;
+  position: relative;
+  overflow: auto;
+}
+
+footer {
+  height: 10%;
+  display: block;
+
+  position: relative;
+}
+
+footer div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav {
+  height: 100%;
+  overflow: auto;
+}
+
+nav ul {
+  float: right;
+}
+
+nav ul li {
+  list-style: none;
+  float: left;
+  padding-right: 1em;
+  justify-content: end;
+}
+nav ul li button {
+  background-color: #78a9ed;
+
+  width: 100px;
+  height: 30px;
+
+  border: none;
+  border-radius: 2px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: purple;
+}
+
+main ul {
+  margin: auto;
+}
+
+main ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+main ul li button {
+  background-color: #78a9ed;
+
+  width: 100px;
+  height: 80px;
+
+  border: none;
+  border-radius: 2px;
+}
+
+main ul li button a {
+  background-color: #78a9ed;
+
+  width: 100px;
+  height: 30px;
+
+  border: none;
+  border-radius: 2px;
+}
+
+main img {
+  margin: 1rem;
+  width: 70%;
+  height: 55%;
 }

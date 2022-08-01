@@ -2,53 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
-    <style>
-      .main {
-        background-color: aquamarine;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
   </head>
-
   <body>
-    <header>layout-header</header>
-
-    <section class="main">
-      <h1>h1</h1>
-      <h3>h2</h3>
-      <h6>h3</h6>
-      <h2>관광 명소 - 인사동</h2>
-      <p><strong>'대갈문화축제'</strong>가 <b>인사동</b>에서 열린다.</p>
-      <p><em>'민화'</em>라는 <i>그림</i>을 볼 수 있다.</p>
-    </section>
-
-    <hr />
-
-    <section class="main">
-      <h3>context</h3>
-      <p>
-        Lorem ipsum dolor sit amen consenter adipisicing elite. <br />
-        Quibusdam, pisa.
-      </p>
-      <blockquote>JAVA란 무엇인가?</blockquote>
-      라고 질문한다면, <q>객체지향 언어이다.</q>라고 답변하겠다.
-
-      <blockquote cite="https://www.w3.org">HTML이란 무엇인가?</blockquote>
-      라고 질문한다면, <q cite="https://www.w3.org">문서</q>라고 답변하겠다.
-    </section>
-
-    <hr />
-
-    <aside>
+    <header>
       <nav>
-        <a href="www.naver.com">문화</a><br />
-        <a href="#">외신</a>
+        <ul>
+          <li>
+            <button><a href="index.html">홈</a></button>
+          </li>
+          <li>
+            <button><a href="aboutme.html">자기소개</a></button>
+          </li>
+          <li>
+            <button><a href="photo.html">내사진</a></button>
+          </li>
+          <li>
+            <button><a href="today">몇시예요</a></button>
+          </li>
+        </ul>
       </nav>
-    </aside>
+    </header>
+    <main>
+      <h1>웹프론트엔드 개발자~! crong</h1>
+      <p>
+        함께 개발하고 같이성장하고 싶어요<br />경기도 시흥시 장곡동 어딘가 살고
+        있어요!
+      </p>
+      <ul>
+        <li>
+          <button><a href="aboutme.html">자기소개</a></button>
+        </li>
+        <li>
+          <button><a href="photo.html">내사진</a></button>
+        </li>
+      </ul>
+      <img src="./map.png" alt="지도" />
+    </main>
     <footer>
-      <address>서울 강남구 삼성동</address>
+      <div>crong@codesquad.kr<br />http://github.com/cron</div>
     </footer>
   </body>
 </html>
