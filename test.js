@@ -1,9 +1,7 @@
-function a() {
-  console.log(arguments);
+let el = document.querySelector('.outside');
 
-  for (const element in arguments) {
-    console.log(arguments[element]);
-  }
-}
-
-a(1, 2, 3);
+el.addEventListener('click', (e) => {
+  const target = e.target;
+  console.log(target);
+  console.log(target.innerText);
+});
