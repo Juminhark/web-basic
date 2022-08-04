@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+body {
+  background-color: #333; /* 배경색은 짙은 회색 */
+  color: #fff; /* 글자색은 희색 */
+  text-align: center; /* 글자 가운데 정렬 */
+  justify-content: center;
+}
+
+body > img {
+  width: 600px;
+  height: 400px;
+  margin: 2rem;
+}
+
+body > audio {
+  display: block;
+}
