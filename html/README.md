@@ -1,22 +1,22 @@
-# HTML
+# HTML(Hypertext Markup Language)
 
-> HTML은 Element의 조합이다.
+- 웹사이트의 모습을 기술하기 위한 마크업 언어
+- HTML은 Element의 조합이다.
 
 ## HTML Element
-
-> 형식 :
-
-```js
-<tag name> content </tag name>
+- 기본 스타일
+```html
+<!-- Bad -->
+<table>
+<tag name>content</tag name>
+```
+- 속성값(attributes) : HTML Element의 추가적인 속성관리 요소
+```html
+// attributes
+<img src="" width="300" height="500" />
 ```
 
-> attributes : HTML Element의 추가적인 속성관리 요소
-
-```js
-<img src='' width='300' height='500' />
-```
-
-### Semantic Tags
+## Semantic Tags
 
 - 중요성
 
@@ -32,7 +32,7 @@
 - article : main안에서 핵심 컨텐츠에 구분이 필요한 경우 / 각기 독립적인 내용
 - section : main안에서 핵심 컨텐츠에 구분이 필요한 경우 / 연관되어있으나 구분이 필요한 경우
 
-### 햇갈리는것
+## 햇갈리는것
 
 - article vs section : 내용들끼리의 연관성
 - i vs em : i는 시각적으로만 / em은 강조하는 이탤릭체
@@ -76,7 +76,7 @@
 // css : Flex, Grid 스타일용
 ```
 
-### 1. 레이아웃을 위한 tag
+## 1. 레이아웃을 위한 tag
 
 ![layout](./img/layout.jpg)
 
@@ -86,14 +86,14 @@
 - footer
 - aside
 
-### 2. html 구조설계
+## 2. html 구조설계
 
 - 현업에서는 Presentation 문서형태의 기획서나 디자인 파일을 받아서 그것을 기반으로 HTML개발을 시작
 - 주어진 화면을 구조를 분석하여 구현
 - 상단/본문/네비게이션 이런 식으로 큰 부분부터 분리
 - 목록, 이미지, 문단등 나타낼것들의 적절한 태그 사용
 
-### 3. class와 id 속성
+## 3. class와 id 속성
 
 - ID : 고유한 속성으로 한 HTML 문서에 하나만 사용 가능합니다. 검색에도 용이
 - Class : 하나의 HTML문서 안에 중복해서 사용 가능합니다.

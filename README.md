@@ -2,9 +2,9 @@
 
 ## Reference
 
+- [신입에게 추천하는 프론트엔드 가이드](https://okky.kr/articles/1303947)
 - [한시간만에 끝내는 HTML+CSS 입문](https://www.youtube.com/watch?v=cb7VlXqFla4)
 
----
 
 ## Web tool
 
@@ -60,6 +60,3 @@
   - [image compressor]
   - [css-tricks]
 
-```
-
-```
