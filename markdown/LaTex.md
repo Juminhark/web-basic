@@ -350,15 +350,6 @@ $\overline{AB}$
 $\overline{AB}$
 ```
 
-## 표기
-
-$\Longleftrightarrow$
-
-```
-$\Longleftrightarrow$
-```
-
 ## Reference
 
-- [수학수식](https://khw11044.github.io/blog/blog-etc/2020-12-21-markdown-tutorial2/#5%EC%95%84%EB%9E%98%EC%B2%A8%EC%9E%90--indices)
-- [latex](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+- [위키 - latex문법](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95)

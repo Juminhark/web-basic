@@ -1,6 +1,7 @@
 # WEB-basic
 
 - [markdown](./markdown/README.md)
+  - [latex](./markdown/LaTex.md)
 
 ## Reference
 
