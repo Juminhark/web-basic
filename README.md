@@ -1,5 +1,11 @@
 # WEB-basic
 
+- [markdown](./markdown/README.md)
+
+## Reference
+
+- [프론트엔드 가이드](https://okky.kr/articles/1303947)
+- [한시간만에 끝내는 HTML+CSS 입문](https://www.youtube.com/watch?v=cb7VlXqFla4)
 - [HTML/CSS/Sass](https://ui.toast.com/fe-guide/ko_HTMLCSS)
 - [코딩컨벤션](https://ui.toast.com/fe-guide/ko_CODING-CONVENTION)
 - [안티 패턴](https://ui.toast.com/fe-guide/ko_ANTI-PATTERN/)
@@ -12,9 +18,3 @@
 - [TOAST UI CodeSnippet](https://ui.toast.com/fe-guide/ko_TOAST-UI-CodeSnippet)
 - [ES5 + ES6+](https://ui.toast.com/fe-guide/ko_ES5-TO-ES6)
 - [jQuery](https://ui.toast.com/fe-guide/ko_jQuery)
-- [markdown](./markdown/README.md)
-
-## Reference
-
-- [프론트엔드 가이드](https://okky.kr/articles/1303947)
-- [한시간만에 끝내는 HTML+CSS 입문](https://www.youtube.com/watch?v=cb7VlXqFla4)
